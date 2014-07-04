@@ -57,6 +57,27 @@ public class WebPixelManager {
             return this;
         };
     };
+    //Класс клиенты, инициируется через .set(...)
+    public static class Costumer{
+        public int id = 0;
+        public String firstname= null;
+        public String secondname= null;
+        public String midlename= null;
+        public String phone = null;
+        public String email = null;
+        public String skype = null;
+        public Costumer set(int vId, String vFname, String vSname, String vMname,
+                String vTel, String vMail, String vSkype){
+            this.id = vId;
+            this.firstname = vFname;
+            this.secondname = vSname;
+            this.midlename = vMname;
+            this.phone = vTel;
+            this.email = vMail;
+            this.skype = vSkype;
+            return this;        
+        }
+    };
     //Переменные для работы с БД
     public static String db_host = "jdbc:mysql://web-pixel.pro/bh47794_db?zeroDateTimeBehavior=convertToNull";
     public static String db_login = "bh47794_diego";
